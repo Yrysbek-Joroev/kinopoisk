@@ -1,5 +1,6 @@
 const url = 'https://www.omdbapi.com/?apikey=b6003d8a&s=All';
 const input = document.querySelector('input')
+let form = document.querySelector('form')
 
 const moviesContainer = document.querySelector('#movies-container');
 fetch(url)
@@ -44,7 +45,8 @@ fetch(url)
 
 // ! Упростил и заработал
 
-input.addEventListener('change', () => {
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
   moviesContainer.innerHTML = '';
   fetch(url)
     .then(response => response.json())
@@ -57,7 +59,7 @@ input.addEventListener('change', () => {
             <div class='card'>
               <img src='${value.Poster}'>
               <h3>${value.Title}</h3>
-              <p>${value.Year}</p>
+              <p>${value.Year}</p> 
             </div>
           `;
         }

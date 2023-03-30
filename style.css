@@ -1,12 +1,36 @@
 body {
   margin: 0;
 }
+
+.container {
+  background-color: black;
+}
+
+form {
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+form input {
+  height: 20px;
+  width: 500px;
+}
+
+form button {
+  background-color: white;
+  color: black;
+  height: 25px;
+}
+
 #movies-container {
   color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: black;
 }
 
 .card {
